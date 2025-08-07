@@ -1,8 +1,7 @@
 package com.nequi.franchise_api.infrastructure.adapter.in.web;
 
 import com.nequi.franchise_api.application.service.BranchApplicationService;
-import com.nequi.franchise_api.domain.port.in.command.AddBranchUseCase;
-import com.nequi.franchise_api.domain.port.in.command.UpdateBranchUseCase;
+import com.nequi.franchise_api.domain.port.in.command.BranchCommandUseCase;
 import com.nequi.franchise_api.domain.port.in.query.BranchQueryUseCase;
 import com.nequi.franchise_api.infrastructure.dto.request.CreateBranchRequest;
 import com.nequi.franchise_api.infrastructure.dto.request.UpdateBranchRequest;
@@ -114,7 +113,7 @@ public class BranchController {
         log.info("Creating branch with name: {} for franchise: {}", request.name(), franchiseId);
 
         return branchApplicationService
-                .addBranch(new AddBranchUseCase.AddBranchCommand(franchiseId, request.name()))
+                .addBranch(new BranchCommandUseCase.AddBranchCommand(franchiseId, request.name()))
                 .map(branchMapper::toResponse)
                 .map(response -> ApiResponse.success("Branch created successfully", response))
                 .doOnSuccess(result -> log.info("Branch created: {} for franchise: {}", result.data().id(), franchiseId));
@@ -135,7 +134,7 @@ public class BranchController {
         log.info("Updating branch: {} with name: {}", branchId, request.name());
 
         return branchApplicationService
-                .updateBranch(new UpdateBranchUseCase.UpdateBranchCommand(branchId, request.name()))
+                .updateBranch(new BranchCommandUseCase.UpdateBranchCommand(branchId, request.name()))
                 .map(branchMapper::toResponse)
                 .map(response -> ApiResponse.success("Branch updated successfully", response))
                 .doOnSuccess(result -> log.info("Branch updated: {}", result.data().id()));

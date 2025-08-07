@@ -1,8 +1,7 @@
 package com.nequi.franchise_api.application.service;
 
 import com.nequi.franchise_api.domain.model.entity.Branch;
-import com.nequi.franchise_api.domain.port.in.command.AddBranchUseCase;
-import com.nequi.franchise_api.domain.port.in.command.UpdateBranchUseCase;
+import com.nequi.franchise_api.domain.port.in.command.BranchCommandUseCase;
 import com.nequi.franchise_api.domain.port.in.query.BranchQueryUseCase;
 import com.nequi.franchise_api.domain.service.command.BranchCommandService;
 import com.nequi.franchise_api.domain.service.query.BranchQueryService;
@@ -14,8 +13,7 @@ import reactor.core.publisher.Mono;
 @Service
 @RequiredArgsConstructor
 public class BranchApplicationService implements
-        AddBranchUseCase,
-        UpdateBranchUseCase,
+        BranchCommandUseCase,
         BranchQueryUseCase {
 
     private final BranchCommandService branchCommandService;

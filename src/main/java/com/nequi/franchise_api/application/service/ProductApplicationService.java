@@ -1,10 +1,7 @@
 package com.nequi.franchise_api.application.service;
 
 import com.nequi.franchise_api.domain.model.entity.Product;
-import com.nequi.franchise_api.domain.port.in.command.AddProductUseCase;
-import com.nequi.franchise_api.domain.port.in.command.RemoveProductUseCase;
-import com.nequi.franchise_api.domain.port.in.command.UpdateProductUseCase;
-import com.nequi.franchise_api.domain.port.in.command.UpdateStockUseCase;
+import com.nequi.franchise_api.domain.port.in.command.ProductCommandUseCase;
 import com.nequi.franchise_api.domain.port.in.query.ProductQueryUseCase;
 import com.nequi.franchise_api.domain.service.command.ProductCommandService;
 import com.nequi.franchise_api.domain.service.query.ProductQueryService;
@@ -15,12 +12,7 @@ import reactor.core.publisher.Mono;
 
 @Service
 @RequiredArgsConstructor
-public class ProductApplicationService implements
-        AddProductUseCase,
-        UpdateProductUseCase,
-        UpdateStockUseCase,
-        RemoveProductUseCase,
-        ProductQueryUseCase {
+public class ProductApplicationService implements ProductQueryUseCase, ProductCommandUseCase {
 
     private final ProductCommandService productCommandService;
     private final ProductQueryService productQueryService;

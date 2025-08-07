@@ -3,8 +3,7 @@ package com.nequi.franchise_api.application.service;
 import com.nequi.franchise_api.domain.model.aggregate.FranchiseAggregate;
 import com.nequi.franchise_api.domain.model.aggregate.ProductMaxStock;
 import com.nequi.franchise_api.domain.model.entity.Franchise;
-import com.nequi.franchise_api.domain.port.in.command.CreateFranchiseUseCase;
-import com.nequi.franchise_api.domain.port.in.command.UpdateFranchiseUseCase;
+import com.nequi.franchise_api.domain.port.in.command.FranchiseCommandUseCase;
 import com.nequi.franchise_api.domain.port.in.query.FranchiseQueryUseCase;
 import com.nequi.franchise_api.domain.port.in.query.ProductsWithMaxStockQueryUseCase;
 import com.nequi.franchise_api.domain.service.command.FranchiseCommandService;
@@ -17,8 +16,7 @@ import reactor.core.publisher.Mono;
 @Service
 @RequiredArgsConstructor
 public class FranchiseApplicationService implements
-        CreateFranchiseUseCase,
-        UpdateFranchiseUseCase,
+        FranchiseCommandUseCase,
         FranchiseQueryUseCase,
         ProductsWithMaxStockQueryUseCase {
 

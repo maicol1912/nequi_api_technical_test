@@ -1,10 +1,7 @@
 package com.nequi.franchise_api.infrastructure.adapter.in.web;
 
 import com.nequi.franchise_api.application.service.ProductApplicationService;
-import com.nequi.franchise_api.domain.port.in.command.AddProductUseCase;
-import com.nequi.franchise_api.domain.port.in.command.RemoveProductUseCase;
-import com.nequi.franchise_api.domain.port.in.command.UpdateProductUseCase;
-import com.nequi.franchise_api.domain.port.in.command.UpdateStockUseCase;
+import com.nequi.franchise_api.domain.port.in.command.ProductCommandUseCase;
 import com.nequi.franchise_api.domain.port.in.query.ProductQueryUseCase;
 import com.nequi.franchise_api.infrastructure.dto.request.CreateProductRequest;
 import com.nequi.franchise_api.infrastructure.dto.request.UpdateProductRequest;
@@ -120,7 +117,7 @@ public class ProductController {
         log.info("Adding product to branch: {} with name: {} and stock: {}", branchId, request.name(), request.stock());
 
         return productApplicationService
-                .addProduct(new AddProductUseCase.AddProductCommand(branchId, request.name(), request.stock()))
+                .addProduct(new ProductCommandUseCase.AddProductCommand(branchId, request.name(), request.stock()))
                 .map(productMapper::toResponse)
                 .map(response -> ApiResponse.success("Product added successfully", response))
                 .doOnSuccess(result -> log.info("Product added: {}", result.data().id()));
@@ -141,7 +138,7 @@ public class ProductController {
         log.info("Updating product: {} with name: {}", productId, request.name());
 
         return productApplicationService
-                .updateProduct(new UpdateProductUseCase.UpdateProductCommand(productId, request.name()))
+                .updateProduct(new ProductCommandUseCase.UpdateProductCommand(productId, request.name()))
                 .map(productMapper::toResponse)
                 .map(response -> ApiResponse.success("Product updated successfully", response))
                 .doOnSuccess(result -> log.info("Product updated: {}", result.data().id()));
@@ -162,7 +159,7 @@ public class ProductController {
         log.info("Updating stock for product: {} to: {}", productId, request.stock());
 
         return productApplicationService
-                .updateStock(new UpdateStockUseCase.UpdateStockCommand(productId, request.stock()))
+                .updateStock(new ProductCommandUseCase.UpdateStockCommand(productId, request.stock()))
                 .map(productMapper::toResponse)
                 .map(response -> ApiResponse.success("Stock updated successfully", response))
                 .doOnSuccess(result -> log.info("Stock updated for product: {}", result.data().id()));
@@ -182,7 +179,7 @@ public class ProductController {
         log.info("Removing product: {}", productId);
 
         return productApplicationService
-                .removeProduct(new RemoveProductUseCase.RemoveProductCommand(productId))
+                .removeProduct(new ProductCommandUseCase.RemoveProductCommand(productId))
                 .doOnSuccess(unused -> log.info("Product removed: {}", productId));
     }
 }

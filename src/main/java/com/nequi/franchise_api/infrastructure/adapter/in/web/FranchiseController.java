@@ -1,8 +1,7 @@
 package com.nequi.franchise_api.infrastructure.adapter.in.web;
 
 import com.nequi.franchise_api.application.service.FranchiseApplicationService;
-import com.nequi.franchise_api.domain.port.in.command.CreateFranchiseUseCase;
-import com.nequi.franchise_api.domain.port.in.command.UpdateFranchiseUseCase;
+import com.nequi.franchise_api.domain.port.in.command.FranchiseCommandUseCase;
 import com.nequi.franchise_api.domain.port.in.query.FranchiseQueryUseCase;
 import com.nequi.franchise_api.domain.port.in.query.ProductsWithMaxStockQueryUseCase;
 import com.nequi.franchise_api.infrastructure.dto.request.CreateFranchiseRequest;
@@ -52,7 +51,7 @@ public class FranchiseController {
         log.info("Creating franchise with name: {}", request.name());
 
         return franchiseApplicationService
-                .createFranchise(new CreateFranchiseUseCase.CreateFranchiseCommand(request.name()))
+                .createFranchise(new FranchiseCommandUseCase.CreateFranchiseCommand(request.name()))
                 .map(franchiseMapper::toResponse)
                 .map(response -> ApiResponse.success("Franchise created successfully", response))
                 .doOnSuccess(result -> log.info("Franchise created: {}", result.data().id()));
@@ -73,7 +72,7 @@ public class FranchiseController {
         log.info("Updating franchise: {} with name: {}", franchiseId, request.name());
 
         return franchiseApplicationService
-                .updateFranchise(new UpdateFranchiseUseCase.UpdateFranchiseCommand(franchiseId, request.name()))
+                .updateFranchise(new FranchiseCommandUseCase.UpdateFranchiseCommand(franchiseId, request.name()))
                 .map(franchiseMapper::toResponse)
                 .map(response -> ApiResponse.success("Franchise updated successfully", response))
                 .doOnSuccess(result -> log.info("Franchise updated: {}", result.data().id()));
