@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "2c275f8e-e0c5-40ca-8fc1-aef97bc8c64a",
+		"name": "NEQUI_TECHNICAL_TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27143531",
+		"_collection_link": "https://solar-meteor-458431.postman.co/workspace/NEQUI_TECHNICAL~7aac510d-7776-4dc1-b773-b115c54cd44c/collection/27143531-2c275f8e-e0c5-40ca-8fc1-aef97bc8c64a?action=share&source=collection_link&creator=27143531"
+	},
+	"item": [
+		{
+			"name": "BRANCHES",
+			"item": [
+				{
+					"name": "GET_ALL_BRANCHES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/branches/franchises/550e8400-e29b-41d4-a716-446655440001"
+					},
+					"response": []
+				},
+				{
+					"name": "GET_ONE_BRANCHES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/branches/550e8400-e29b-41d4-a716-446655440011"
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_BRANCH",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Branch Bogota\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/branches/550e8400-e29b-41d4-a716-446655440001"
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_BRANCH",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"BRANCHES BOGOTA ACTUALIZDAO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/branches/c84da542-8422-4af3-94ee-eb8dded91b25"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FRANCHISE",
+			"item": [
+				{
+					"name": "GET_ALL_FRANCHISE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/franchises"
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_FRANCHISE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Sucursal Maicol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/franchises"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_FRANCHISE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Sucursal Maicol actualizada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/franchises/e5eee03a-22d5-412e-af56-65fc4877fa2f"
+					},
+					"response": []
+				},
+				{
+					"name": "GET_ONE_FRANCHISE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/franchises/550e8400-e29b-41d4-a716-446655440001"
+					},
+					"response": []
+				},
+				{
+					"name": "MAX_PRODUT_BRANCH_BY_FRANCHISE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/franchises/550e8400-e29b-41d4-a716-446655440001/products-max-stock"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HEALTH",
+			"item": [
+				{
+					"name": "HEALTCHECK",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRODUCTS",
+			"item": [
+				{
+					"name": "CREATE_PRODUCT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"cafe\",\r\n    \"stock\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/products/branch/c84da542-8422-4af3-94ee-eb8dded91b25"
+					},
+					"response": []
+				},
+				{
+					"name": "GET_ALL_PRODUCTS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/products"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_PRODUCT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"MACCCC2C\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/products/7f0eb6da-9922-4e89-ae0e-35a25734834e"
+					},
+					"response": []
+				},
+				{
+					"name": "GET_PRODUCT_BY_ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/products/a48baad8-71a7-47f7-a88d-6dbaae5ab18f"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_PRODUCT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"MACCCCC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/products/7f0eb6da-9922-4e89-ae0e-35a25734834e"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_PRODUCT_STOCK",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stock\": 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/products/a48baad8-71a7-47f7-a88d-6dbaae5ab18f/stock"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
