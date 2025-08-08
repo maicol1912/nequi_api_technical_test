@@ -30,3 +30,31 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Terraform state files
+*.tfvars
+*.tfstate
+*.tfstate.backup
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Variable files with sensitive data
+terraform.tfvars
+*.auto.tfvars
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform plan files
+*tfplan*
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+EOF
+add-github-secrets.sh
