@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "2c275f8e-e0c5-40ca-8fc1-aef97bc8c64a",
+		"_postman_id": "50223d7e-502f-41dd-9f67-631ca9818294",
 		"name": "NEQUI_TECHNICAL_TEST",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "27143531",
-		"_collection_link": "https://solar-meteor-458431.postman.co/workspace/NEQUI_TECHNICAL~7aac510d-7776-4dc1-b773-b115c54cd44c/collection/27143531-2c275f8e-e0c5-40ca-8fc1-aef97bc8c64a?action=share&source=collection_link&creator=27143531"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24860457",
+		"_collection_link": "https://lively-firefly-905048.postman.co/workspace/NEQUI_TECHNICAL_TEST~85b1a354-0ec1-4bad-a92d-163a3e7f6ccb/collection/24860457-50223d7e-502f-41dd-9f67-631ca9818294?action=share&source=collection_link&creator=24860457"
 	},
 	"item": [
 		{
@@ -15,7 +15,19 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/branches/franchises/550e8400-e29b-41d4-a716-446655440001"
+						"url": {
+							"raw": "{{HOST}}/api/v1/branches/franchises/1f554ee2-baa4-4e0d-b180-fd6e46330c8a",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"branches",
+								"franchises",
+								"1f554ee2-baa4-4e0d-b180-fd6e46330c8a"
+							]
+						}
 					},
 					"response": []
 				},
@@ -24,7 +36,18 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/branches/550e8400-e29b-41d4-a716-446655440011"
+						"url": {
+							"raw": "{{HOST}}/api/v1/branches/254c0ac0-edcc-481b-807b-09170393c893",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"branches",
+								"254c0ac0-edcc-481b-807b-09170393c893"
+							]
+						}
 					},
 					"response": []
 				},
@@ -35,32 +58,54 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"Branch Bogota\"\r\n}",
+							"raw": "{\r\n    \"name\":\"JBL MANIZALES 3\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/branches/550e8400-e29b-41d4-a716-446655440001"
+						"url": {
+							"raw": "{{HOST}}/api/v1/branches/1f554ee2-baa4-4e0d-b180-fd6e46330c8a",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"branches",
+								"1f554ee2-baa4-4e0d-b180-fd6e46330c8a"
+							]
+						}
 					},
 					"response": []
 				},
 				{
-					"name": "CREATE_BRANCH",
+					"name": "UPDATE_BRANCH",
 					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"BRANCHES BOGOTA ACTUALIZDAO\"\r\n}",
+							"raw": "{\r\n    \"name\":\"JBL MANIZALES ACTUALIZADO\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/branches/c84da542-8422-4af3-94ee-eb8dded91b25"
+						"url": {
+							"raw": "{{HOST}}/api/v1/branches/254c0ac0-edcc-481b-807b-09170393c893",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"branches",
+								"254c0ac0-edcc-481b-807b-09170393c893"
+							]
+						}
 					},
 					"response": []
 				}
@@ -74,7 +119,17 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/franchises"
+						"url": {
+							"raw": "{{HOST}}/api/v1/franchises",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"franchises"
+							]
+						}
 					},
 					"response": []
 				},
@@ -85,14 +140,24 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"Sucursal Maicol\"\r\n}",
+							"raw": "{\r\n    \"name\":\"JBL COMERCIANTES\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/franchises"
+						"url": {
+							"raw": "{{HOST}}/api/v1/franchises",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"franchises"
+							]
+						}
 					},
 					"response": []
 				},
@@ -103,14 +168,25 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"Sucursal Maicol actualizada\"\r\n}",
+							"raw": "{\r\n    \"name\":\"JBL COMERCIANTES ACTUALIZADO\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/franchises/e5eee03a-22d5-412e-af56-65fc4877fa2f"
+						"url": {
+							"raw": "{{HOST}}/api/v1/franchises/1f554ee2-baa4-4e0d-b180-fd6e46330c8a",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"franchises",
+								"1f554ee2-baa4-4e0d-b180-fd6e46330c8a"
+							]
+						}
 					},
 					"response": []
 				},
@@ -119,7 +195,18 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/franchises/550e8400-e29b-41d4-a716-446655440001"
+						"url": {
+							"raw": "{{HOST}}/api/v1/franchises/1f554ee2-baa4-4e0d-b180-fd6e46330c8a",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"franchises",
+								"1f554ee2-baa4-4e0d-b180-fd6e46330c8a"
+							]
+						}
 					},
 					"response": []
 				},
@@ -128,7 +215,19 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/franchises/550e8400-e29b-41d4-a716-446655440001/products-max-stock"
+						"url": {
+							"raw": "{{HOST}}/api/v1/franchises/1f554ee2-baa4-4e0d-b180-fd6e46330c8a/products-max-stock",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"franchises",
+								"1f554ee2-baa4-4e0d-b180-fd6e46330c8a",
+								"products-max-stock"
+							]
+						}
 					},
 					"response": []
 				}
@@ -142,7 +241,17 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": ""
+						"url": {
+							"raw": "{{HOST}}/api/v1/healthcheck",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"healthcheck"
+							]
+						}
 					},
 					"response": []
 				}
@@ -158,14 +267,26 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"cafe\",\r\n    \"stock\": 20\r\n}",
+							"raw": "{\r\n    \"name\": \"CARAMELO TOSTADO\",\r\n    \"stock\": 19\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/products/branch/c84da542-8422-4af3-94ee-eb8dded91b25"
+						"url": {
+							"raw": "{{HOST}}/api/v1/products/branch/08a61cea-828e-470a-9938-4f49a8a7a01a",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"branch",
+								"08a61cea-828e-470a-9938-4f49a8a7a01a"
+							]
+						}
 					},
 					"response": []
 				},
@@ -174,7 +295,17 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/products"
+						"url": {
+							"raw": "{{HOST}}/api/v1/products",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
 					},
 					"response": []
 				},
@@ -192,7 +323,18 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/products/7f0eb6da-9922-4e89-ae0e-35a25734834e"
+						"url": {
+							"raw": "{{HOST}}/api/v1/products/7f0eb6da-9922-4e89-ae0e-35a25734834e",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"7f0eb6da-9922-4e89-ae0e-35a25734834e"
+							]
+						}
 					},
 					"response": []
 				},
@@ -201,7 +343,18 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/products/a48baad8-71a7-47f7-a88d-6dbaae5ab18f"
+						"url": {
+							"raw": "{{HOST}}/api/v1/products/a48baad8-71a7-47f7-a88d-6dbaae5ab18f",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"a48baad8-71a7-47f7-a88d-6dbaae5ab18f"
+							]
+						}
 					},
 					"response": []
 				},
@@ -219,7 +372,18 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/products/7f0eb6da-9922-4e89-ae0e-35a25734834e"
+						"url": {
+							"raw": "{{HOST}}/api/v1/products/7f0eb6da-9922-4e89-ae0e-35a25734834e",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"7f0eb6da-9922-4e89-ae0e-35a25734834e"
+							]
+						}
 					},
 					"response": []
 				},
@@ -237,7 +401,19 @@
 								}
 							}
 						},
-						"url": "http://localhost:8080/api/v1/products/a48baad8-71a7-47f7-a88d-6dbaae5ab18f/stock"
+						"url": {
+							"raw": "{{HOST}}/api/v1/products/a48baad8-71a7-47f7-a88d-6dbaae5ab18f/stock",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"a48baad8-71a7-47f7-a88d-6dbaae5ab18f",
+								"stock"
+							]
+						}
 					},
 					"response": []
 				}

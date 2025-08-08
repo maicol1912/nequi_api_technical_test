@@ -36,22 +36,12 @@ public class OpenApiConfig {
                         .description(appDescription)
                         .version(appVersion)
                         .contact(new Contact()
-                                .name("NEQUI Development Team")
-                                .email("dev@nequi.com")
-                                .url("https://www.nequi.com"))
-                        .license(new License()
-                                .name("MIT License")
-                                .url("https://opensource.org/licenses/MIT")))
+                                .name("Maicol Arcila")
+                                .email("maicoldev05@gmail.com")))
                 .servers(List.of(
                         new Server()
-                                .url("http://localhost:8080")
-                                .description("Local development server"),
-                        new Server()
-                                .url("https://api-staging.nequi.com")
-                                .description("Staging server"),
-                        new Server()
-                                .url("https://api.nequi.com")
-                                .description("Production server")))
+                                .url("https://franchise-api-prod-api-523802894907.us-central1.run.app")
+                                .description("api production server")))
                 .externalDocs(new ExternalDocumentation()
                         .description("Franchise API Documentation")
                         .url("https://docs.nequi.com/franchise-api"));
